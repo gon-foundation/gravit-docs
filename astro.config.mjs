@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Gravit Docs',
+			favicon: '/favicon.png',
 			description: 'Documentation for the open tools of the Gravit Open Network Foundation: verifier, API, receipts, Capability Gate, Graviteron, History Keeper, Gravit Path.',
 			logo: { src: './src/assets/logo.webp', alt: 'Gravit' },
 			social: [
