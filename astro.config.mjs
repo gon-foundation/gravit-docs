@@ -3,19 +3,20 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-	site: 'https://docs.gravit.space',
+	site: 'https://docs.gravit.world',
 	integrations: [
 		starlight({
 			title: 'Gravit Docs',
 			description: 'Documentation for the open tools of the Gravit Open Network Foundation: verifier, API, receipts, Capability Gate, Graviteron, History Keeper, Gravit Path.',
 			logo: { src: './src/assets/logo.webp', alt: 'Gravit' },
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/gravit-open-network-foundation' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/gon-foundation' },
 				{ icon: 'x.com', label: 'X', href: 'https://x.com/gravitopnetwork' },
 			],
-			editLink: { baseUrl: 'https://github.com/gravit-open-network-foundation/gravit-docs/edit/main/' },
+			editLink: { baseUrl: 'https://github.com/gon-foundation/gravit-docs/edit/main/' },
 			lastUpdated: true,
 			customCss: ['./src/styles/gravit.css'],
+			components: { SiteTitle: './src/components/SiteTitle.astro' },
 			head: [
 				// Light theme by default, like most documentation; the reader's own choice is kept.
 				{ tag: 'script', content: "try{if(!localStorage.getItem('starlight-theme'))localStorage.setItem('starlight-theme','light')}catch(e){}" },
